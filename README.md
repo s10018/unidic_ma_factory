@@ -21,8 +21,17 @@ ph0から8まで順に適用していきます。
 
 また上述のSQLを使って抽出すると、タブ区切り、各行の要素にはコロン（:）を前に置いた名前付きのtsvになります(.ntsv)。
 
+仮にここでは、corpus.ntsv、lex.ntsv と呼ぶことにしましょう。
+
 ![ntsv_img](https://raw.githubusercontent.com/teru-oka-1933/unidic_ma_factory/master/img/ntsv.png "ntsv_img")
 
 ## ph0_sampling_test_data.py
 
-これは
+このスクリプトでは、辞書の性能評価に使うコーパスをcorpus.ntsvから選びます。
+
+評価はcorpus.ntsvからファイル単位で１割ずつ選んでいきます。
+
+語彙素、語形、出現形、語種をチェックし、メジャーな語（短単位）で構成されているファイル～マイナーな短単位を多く含むファイルまで、
+まんべんなく選択するクラスタリング手法を組み込んでいます。
+
+
