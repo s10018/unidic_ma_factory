@@ -21,6 +21,8 @@ ph0から8まで順に適用していきます。
 
 また上述のSQLを使って抽出すると、タブ区切り、各行の要素にはコロン（:）を前に置いた名前付きのtsvになります(.ntsv)。
 
+![ntsv_img](https://raw.githubusercontent.com/teru-oka-1933/unidic_ma_factory/master/img/ntsv.png "ntsv_img")
+
 ## ph0_sampling_test_data.py
 
 これは
